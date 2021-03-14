@@ -100,32 +100,30 @@ a {
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.logo > .web {
+.logo__web {
   color: var(--blue-text);
 }
 
-.page-header > .container,
-nav .navigation-list,
-.contacts-header {
-  display: flex;
-  align-items: center; /* центрувати по вертикалі */
-}
+/* дизайн логотипу */
 
 /*силки навігації в хедері */
 
 .navigation-list {
   margin-left: 93px;
+
+  display: flex;
+  align-items: center; /* центрувати по вертикалі */
 }
 
-.navigation-list li {
+.navigation-list__item {
   margin-right: 50px;
 }
 
-.navigation-list li:last-child {
+.navigation-list:last-child {
   margin-right: 0px;
 }
 
-.navigation {
+.navigation-list__link {
   color: var(--black-text);
   font-size: 14px;
   font-style: normal;
@@ -135,21 +133,16 @@ nav .navigation-list,
   display: flex;
   padding-top: 32px;
   padding-bottom: 32px;
-}
-
-.navigation:focus,
-.navigation:hover {
-  color: var(--blue-text);
-  transform: scaleX(1);
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.navigation-list .current {
-  position: relative;
+.navigation-list__link:focus,
+.navigation-list__link:hover {
   color: var(--blue-text);
+  transform: scaleX(1);
 }
 
-.navigation::after {
+.navigation-list__link::after {
   content: "";
   height: 4px;
   width: 100%;
@@ -165,40 +158,49 @@ nav .navigation-list,
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.navigation:hover::after,
-.navigation:focus::after {
+.navigation-list__link:hover::after,
+.navigation-list__link:focus::after {
+  transform: scaleX(1);
+}
+
+.navigation-list__link .current {
+  position: relative;
+  color: var(--blue-text);
+}
+
+.navigation-list__link .current::after {
   transform: scaleX(1);
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.navigation-list .current::after {
-  transform: scaleX(1);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
+/*силки навігації в хедері */
 
-.contacts-header {
+.contacts__list {
   margin-left: auto;
+
+  display: flex;
+  align-items: center; /* центрувати по вертикалі */
 }
 
-.contacts-header li:last-child {
+.contacts-item:last-child {
   margin-left: 36px;
 }
 
-.contacts-header-link {
+.contacts-item__link {
   display: block;
   color: var(--gray-text);
   font-weight: 500;
   font-size: 14px;
   text-decoration: none;
-}
-
-.contacts-header-link:hover,
-.contacts-header-link:focus {
-  color: var(--blue-text);
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.contacts-header-icon {
+.contacts-item__link:hover,
+.contacts-item__link:focus {
+  color: var(--blue-text);
+}
+
+.contacts-item__icon {
   margin-right: 10px;
   align-items: center;
   fill: currentColor;
@@ -215,6 +217,11 @@ nav .navigation-list,
 /* сіре підкреслкння в хедері */
 
 /* для всіх контейнерів */
+.page-header__container {
+  display: flex;
+  align-items: center; /* центрувати по вертикалі */
+}
+
 .page-header,
 .hero,
 .footer,
@@ -404,7 +411,7 @@ nav .navigation-list,
   outline: none;
 }
 
-.subscribe-input > .blue-btn {
+.subscribe-input > .button {
   /* у футері */
   margin-left: 12px;
 }
@@ -414,7 +421,7 @@ nav .navigation-list,
   align-items: center;
 }
 
-.blue-btn {
+.button {
   /* для всіх голубих кнопок */
   font-family: Roboto;
   color: var(--white-text);
@@ -437,10 +444,11 @@ nav .navigation-list,
   outline: none;
 }
 
-.blue-btn:hover,
-.blue-btn:focus,
-.blue-btn:active {
+.button:hover,
+.button:focus,
+.button:active {
   background-color: var(--button-active);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* footer */
