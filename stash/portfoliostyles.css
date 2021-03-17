@@ -9,11 +9,11 @@
   margin-bottom: 51px;
 }
 
-.list-btn > li {
+.list-btn__item {
   margin-right: 8px;
 }
 
-.item-btn {
+.list-btn__button {
   background-color: var(--button-background);
   color: var(--black-text);
   font-weight: 500;
@@ -27,9 +27,9 @@
   border: transparent;
 }
 
-.item-btn:active,
-.item-btn:focus,
-.item-btn:hover {
+.list-btn__button:active,
+.list-btn__button:focus,
+.list-btn__button:hover {
   color: var(--white-text);
   background-color: var(--blue-text);
   font-weight: 500;
@@ -51,47 +51,42 @@
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.projects {
+.project-list {
   display: flex;
   flex-wrap: wrap;
 
   margin-top: calc(-1 * var(--project-gap));
   margin-left: calc(-1 * var(--project-gap));
 }
-.projects > .projects-item {
+.project-item {
   /* project-gap = 30px в списку перемінних */
   flex-basis: calc(100% / 3 - var(--project-gap));
   margin-left: var(--project-gap);
   margin-top: var(--project-gap);
-}
-
-.projects-item {
   background: var(--white-background);
 }
-.project-link {
+
+
+.project-item__link {
   display: block;
 }
 
-.project-link:hover,
-.project-link:focus {
+.project-item__link:hover,
+.project-item__link:focus {
   flex-wrap: wrap;
   box-sizing: border-box;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
-a {
-  text-decoration: none;
-}
-
-.project-content {
+.project-item__content {
   padding: 20px 24px 19px 24px;
   border-left: 1px solid var(--white-border);
   border-right: 1px solid var(--white-border);
   border-bottom: 1px solid var(--white-border);
 }
 
-.projects-title {
+.project-item__title {
   color: var(--black-text);
   font-weight: 700;
   font-size: 18px;
@@ -99,7 +94,7 @@ a {
   margin-bottom: 4px;
   text-align: left;
 }
-.projects-text {
+.project-item__text {
   color: var(--gray-text);
   font-weight: 400;
   font-size: 16px;
@@ -107,7 +102,7 @@ a {
   text-align: left;
 }
 
-.projects-thumb {
+.project-item__thumb {
   min-width: 370px;
   min-height: 290px;
 
@@ -115,7 +110,7 @@ a {
   overflow: hidden;
 }
 
-.project-description {
+.project-item__description {
   color: var(--white-text);
   font-style: normal;
   font-weight: normal;
@@ -143,6 +138,6 @@ a {
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.project-link:hover .project-description {
+.project-item__link:hover .project-item__description {
   transform: translateX(0);
 }
