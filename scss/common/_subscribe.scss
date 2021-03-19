@@ -1,28 +1,26 @@
 .subscribe {
   margin-top: 12px;
   margin-left: 93px;
-}
+  &__tittle {
+    color: var(--white-text);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 16px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
 
-.subscribe__tittle {
-  color: var(--white-text);
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 16px;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-
-  text-align: left;
-  margin-bottom: 20px;
+    text-align: left;
+    margin-bottom: 20px;
+  }
 }
 
 .subscribe-container {
   display: flex;
-
   position: relative;
-}
 
-.subscribe-container__button {
-  /* у футері */
-  margin-left: 12px;
+  &__button {
+    /* у футері */
+    margin-left: 12px;
+  }
 }
